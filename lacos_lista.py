@@ -93,18 +93,20 @@ for elemento in inventario:
     print("Serial.......: ", elemento[2])
     print("Departamento.: ", elemento[3])
 
-busca=input("Digite o nome do equipamento que deseja buscar: ")
-for elemento in inventario:
-    if busca==elemento[0]:
-        print("Valor..: ", elemento[1])
-        print("Serial.:", elemento[2])
+def localizar_por_nome(lista):
+    busca=input("Digite o nome do equipamento que deseja buscar: ")
+    for elemento in inventario:
+        if busca==elemento[0]:
+            print("Valor..: ", elemento[1])
+            print("Serial.:", elemento[2])
 
-depreciacao=input("Digite o nome do equipamento que será depreciado: ")
-for elemento in inventario:
-    if depreciacao==elemento[0]:
-        print("Valor antigo: ", elemento[1])
-        elemento[1] = elemento[1] * 0.9
-        print("Novo valor: ", elemento[1])
+def desconto_por_nome(lista):
+    depreciacao=input("Digite o nome do equipamento que será depreciado: ")
+    for elemento in inventario:
+        if depreciacao==elemento[0]:
+            print("Valor antigo: ", elemento[1])
+            elemento[1] = elemento[1] * 0.9
+            print("Novo valor: ", elemento[1])
 
 serial=int(input("Digite o serial do equipamento que será excluído: "))
 for elemento in inventario:
@@ -116,3 +118,4 @@ for elemento in inventario:
     print("Valor........: ", elemento[1])
     print("Serial.......: ", elemento[2])
     print("Departamento.: ", elemento[3])
+    
