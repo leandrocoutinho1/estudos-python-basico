@@ -118,4 +118,3 @@ for elemento in inventario:
     print("Valor........: ", elemento[1])
     print("Serial.......: ", elemento[2])
     print("Departamento.: ", elemento[3])
-    
