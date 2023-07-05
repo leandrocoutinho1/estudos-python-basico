@@ -34,8 +34,7 @@ for dicionario in perguntas:
             print("Acertou 👍")
         else:
             print("Errou ❌")
-    except ValueError:
+    except Exception:
         print("Errou ❌")
 
-print(f"\nVocê acertou {acertos}"
-        f" de {len(perguntas)} perguntas.")
+print(f"\nVocê acertou {acertos} de {len(perguntas)} perguntas.")
