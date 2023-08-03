@@ -27,22 +27,23 @@ lista_de_listas_de_inteiros = [
 ]
 
 
-def encontra_primeiro_duplicado(lista_de_inteiros):
-    numeros_checados = set()
-    primeiro_duplicado = -1
+def achar_1_dupl(lista_de_numeros):
+    lista = []
+    for sublista in lista_de_numeros:
+        repeticao = set()
+        repetido = None
+        for numero in sublista:
+            if numero not in repeticao:
+                repeticao.add(numero)
+            else:
+                repetido = numero
+                break
+        if repetido is None:
+            # print("-1")
+            lista.append(-1)
+        else:
+            # print(repetido)
+            lista.append(repetido)
+    return lista
 
-    for numero in lista_de_inteiros:
-        if numero in numeros_checados:
-            primeiro_duplicado = numero
-            break
-
-        numeros_checados.add(numero)
-
-    return primeiro_duplicado
-
-
-for lista in lista_de_listas_de_inteiros:
-    print(
-        lista,
-        encontra_primeiro_duplicado(lista)
-    )
+print(achar_1_dupl(lista_de_listas_de_inteiros))
