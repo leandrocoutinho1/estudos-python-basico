@@ -1,4 +1,5 @@
 # try, except, else e finally
+# finally sempre será executado
 # https://docs.python.org/pt-br/3/library/exceptions.html#built-in-exceptions
 try:
     print('ABRIR ARQUIVO')
